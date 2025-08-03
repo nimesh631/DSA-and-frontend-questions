@@ -1,0 +1,309 @@
+<!-- PART 1 -->
+
+🟨 HTML – Questions & Answers
+1. **What is the difference between <div> and <section>?
+
+Answer:
+
+    <div> is a generic container with no semantic meaning.
+
+    <section> is a semantic element used for grouping related content, often with a heading.
+
+2. **What are some semantic HTML elements?
+
+Answer:
+
+    Examples: <header>, <footer>, <nav>, <article>, <section>, <aside>
+
+    They improve accessibility, SEO, and readability.
+
+3. What is the purpose of the meta tag?
+
+Answer:
+Provides metadata like character set, viewport, author, or description for search engines and browser behavior.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+🎨 CSS – Questions & Answers
+4. What is the Box Model in CSS?
+
+Answer:
+
+    Content
+
+    Padding
+
+    Border
+
+    Margin
+
+It describes how elements are rendered and spaced.
+5. What is specificity in CSS?
+
+Answer:
+Specificity determines which CSS rule is applied when multiple rules target the same element.
+Selector	Specificity
+Inline Style	1000
+ID	100
+Class/Attribute/Pseudo-class	10
+Element	1
+6. What are pseudo-classes and pseudo-elements?
+
+Answer:
+
+    Pseudo-class: :hover, :focus, :nth-child()
+
+    Pseudo-element: ::before, ::after, ::first-letter
+
+They style elements dynamically or parts of elements.
+🧠 JavaScript – Questions & Answers
+7. What is hoisting in JavaScript?
+
+Answer:
+Variables and function declarations are moved to the top of their scope during compilation.
+
+console.log(a); // undefined
+var a = 5;
+
+8. What are null and undefined?
+
+Answer:
+
+    undefined: declared but not assigned.
+
+    null: explicitly assigned empty value.
+
+let a;
+console.log(a); // undefined
+
+let b = null;
+console.log(b); // null
+
+9. Explain event bubbling and event delegation.
+
+Answer:
+
+    Bubbling: Events propagate from child to parent.
+
+    Delegation: Attach one event listener on parent to handle events on children.
+
+10. What are promises?
+
+Answer:
+Promises represent the result of an asynchronous operation.
+
+fetch("url")
+  .then(res => res.json())
+  .then(data => console.log(data))
+  .catch(err => console.error(err));
+
+⚛️ React – Questions & Answers
+11. What is React and why use it?
+
+Answer:
+React is a JavaScript library for building component-based UIs.
+It uses a virtual DOM, improves performance, and allows reusable code.
+12. What are props and state?
+
+Answer:
+
+    Props: Read-only data passed from parent to child.
+
+    State: Internal, local data that can change within a component.
+
+function Greet({ name }) {
+  return <h1>Hello {name}</h1>;
+}
+
+13. What is the virtual DOM?
+
+Answer:
+A lightweight copy of the actual DOM. React compares it with the previous one (diffing) and updates only the changed parts (reconciliation).
+14. What are React Hooks? Name a few.
+
+Answer:
+Hooks let you use React features in functional components.
+
+    useState – for state
+
+    useEffect – for side effects
+
+    useRef – for references
+
+    useContext – for global context
+
+15. How is useEffect used?
+
+Answer:
+useEffect runs after render and is used for side effects like fetching data or setting up event listeners.
+
+useEffect(() => {
+  fetchData();
+}, []); // Runs only once on mount
+
+16. What is the difference between controlled and uncontrolled components?
+
+Answer:
+
+    Controlled: Form value is managed by React.
+
+    Uncontrolled: Form value is managed by the DOM.
+
+
+<!-- PART 2 -->
+
+🟨 HTML – More Questions (with Answers)
+1. What are data- attributes?*
+
+    Answer:
+    Custom attributes to store extra data on HTML elements. Accessed in JS via element.dataset.
+
+<div data-user-id="123"></div>
+
+2. What is the difference between <strong> and <b>?
+
+    Answer:
+
+        <strong> indicates semantic importance.
+
+        <b> is for visual bolding only.
+
+3. How is accessibility handled in HTML?
+
+    Answer:
+    Using semantic tags, aria-* attributes, proper label usage (<label for="...">), alt text on images, etc.
+
+4. What’s the difference between <script> and <script type="module">?
+
+    Answer:
+
+        Regular <script> executes immediately.
+
+        <script type="module"> supports ES6 imports/exports, executes in strict mode, and is deferred by default.
+
+🎨 CSS – More Questions (with Answers)
+1. What’s the difference between relative, absolute, and fixed positioning?
+Position	Relative to
+relative	Its normal position
+absolute	Nearest positioned ancestor
+fixed	Viewport (remains on scroll)
+2. What is specificity?
+
+    Answer:
+    A ranking system to determine which CSS rule is applied. Inline styles > IDs > classes > tags.
+
+3. Difference between rem and em?
+
+    Answer:
+
+        em: relative to parent element.
+
+        rem: relative to root (<html>) element.
+
+4. What is z-index?
+
+    Answer:
+    It controls stacking order of elements. Higher z-index brings elements to the front.
+
+5. How do media queries work?
+
+    Answer:
+    They apply styles based on device width, height, resolution, etc.
+
+@media (max-width: 768px) {
+  .box {
+    font-size: 14px;
+  }
+}
+
+🧠 JavaScript – More Questions (with Answers)
+1. What are higher-order functions?
+
+    Answer:
+    Functions that take functions as arguments or return them.
+    Example: map(), filter(), reduce()
+
+2. Explain the this keyword.
+
+    Answer:
+    this refers to the context in which the function is called.
+    In arrow functions, this is lexically scoped (from parent context).
+
+3. Difference between synchronous and asynchronous JavaScript?
+
+    Answer:
+
+        Synchronous: code runs line-by-line.
+
+        Asynchronous: non-blocking (e.g., using setTimeout, Promises, async/await)
+
+4. What is destructuring?
+
+    Answer:
+    Extracting values from arrays or objects.
+
+const user = { name: 'Nimesh', age: 22 };
+const { name } = user;
+
+5. Explain spread (...) and rest (...) operators.
+
+    Answer:
+
+        Spread: expands values from an array or object.
+
+        Rest: collects remaining values into an array.
+
+const arr = [1, 2, 3];
+const newArr = [...arr, 4];
+
+function sum(...args) {
+  return args.reduce((a, b) => a + b);
+}
+
+⚛️ React – More Questions (with Answers)
+1. What is a key prop in React lists?
+
+    Answer:
+    A unique identifier for each item, helping React optimize rendering during list changes.
+
+2. Difference between class and functional components?
+Feature	Class Component	Functional Component
+Syntax	extends Component	Just a function
+State	this.state	useState
+Lifecycle	Lifecycle methods	useEffect
+3. When does useEffect run?
+
+    Answer:
+
+useEffect(() => {
+  // runs on mount
+}, []);
+
+useEffect(() => {
+  // runs when 'count' changes
+}, [count]);
+
+4. What are controlled and uncontrolled inputs?
+
+    Answer:
+
+    Controlled: value controlled by React state.
+
+    Uncontrolled: value accessed via ref.
+
+5. What is lifting state up?
+
+    Answer:
+    Moving shared state to the closest common parent so multiple child components can access/update it.
+
+6. What is React Router and why use it?
+
+    Answer:
+    It enables client-side routing, allowing navigation without page reload.
+
+7. What is React Context?
+
+    Answer:
+    A way to share state globally (like a lightweight Redux).
+
+const ThemeContext = React.createContext();
